@@ -1,0 +1,13 @@
+.login-view {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-view h1 {
+    color: white;
+    text-align: center;
+}
+
+.login-view p {
+    color: white;
+    text-align: center;
+}
