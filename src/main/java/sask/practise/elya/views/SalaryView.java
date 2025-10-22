@@ -10,6 +10,7 @@ import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import sask.practise.elya.models.Employee;
@@ -19,6 +20,7 @@ import sask.practise.elya.repositories.SalaryRepository;
 
 import java.time.LocalDate;
 
+@PermitAll
 @Route(value = "salaries", layout = MainLayout.class)
 @PageTitle("Зарплаты | Система учета сотрудников")
 public class SalaryView extends VerticalLayout {

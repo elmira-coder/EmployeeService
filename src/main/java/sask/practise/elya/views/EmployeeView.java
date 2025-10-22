@@ -11,6 +11,7 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import sask.practise.elya.models.Department;
@@ -20,6 +21,7 @@ import sask.practise.elya.repositories.DepartmentRepository;
 import sask.practise.elya.repositories.EmployeeRepository;
 import sask.practise.elya.repositories.PositionRepository;
 
+@PermitAll
 @Route(value = "employees", layout = MainLayout.class)
 @PageTitle("Сотрудники | Система учета сотрудников")
 public class EmployeeView extends VerticalLayout {

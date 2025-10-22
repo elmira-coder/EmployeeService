@@ -16,6 +16,7 @@ import com.vaadin.flow.component.upload.receivers.FileBuffer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.StreamResource;
+import jakarta.annotation.security.PermitAll;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.List;
 
+@PermitAll
 @Route(value = "excel-export-import", layout = MainLayout.class)
 @PageTitle("Экспорт/Импорт Excel | Система учета сотрудников")
 public class ExcelImportView extends VerticalLayout {

@@ -8,6 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.PageTitle;
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import sask.practise.elya.repositories.DepartmentRepository;
 import sask.practise.elya.repositories.EmployeeRepository;
@@ -18,7 +19,8 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
-@Route(value = "/dashboard", layout = MainLayout.class)
+@PermitAll
+@Route(value = "", layout = MainLayout.class)
 @PageTitle("Главная | Система учета сотрудников")
 public class MainView extends VerticalLayout {
 

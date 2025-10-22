@@ -10,11 +10,13 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import sask.practise.elya.models.Department;
 import sask.practise.elya.repositories.DepartmentRepository;
 
+@PermitAll
 @Route(value = "departments", layout = MainLayout.class)
 @PageTitle("Отделы | Система учета сотрудников")
 public class DepartmentView extends VerticalLayout {

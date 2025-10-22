@@ -10,11 +10,13 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import sask.practise.elya.models.Position;
 import sask.practise.elya.repositories.PositionRepository;
 
+@PermitAll
 @Route(value = "positions", layout = MainLayout.class)
 @PageTitle("Должности | Система учета сотрудников")
 public class PositionView extends VerticalLayout {
